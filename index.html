@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+
+    <!-- Linked Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Linked CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Table Design Section -->
+    <section class="section__table">
+
+        <div class="div__products">
+
+            <nav class="navbar">
+
+                <h2></h2>
+
+                <img class="shoes-icon" src="images/shoes-png.png">
+
+                <ul>
+                    <li><a href=""><i class='bx bx-home'></i>Casa</a></li>
+                    <li class="active"><a href=""><i class='bx bxs-shopping-bags'></i>Productos</a></li>
+                    <li><a href=""><i class='bx bx-bar-chart-square'></i>Estadísticas</a></li>
+                    <li><a href=""><i class='bx bxs-bell' ></i>Notificaciones</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="test-div">
+
+                <!-- Header responsive menu Design -->
+                <header class="header">
+                    <a href="">Tiendas Shoes</a>
+                    <i class='bx bx-menu'></i>
+                </header>
+
+                <div class="menu-responsive">
+                    
+                    <ul>
+                        <li><a href="">Casa</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Estadísticas</a></li>
+                        <li><a href="">Notificaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="div__window-table-stock">
+
+                    <h2 class="tittle-window-table-stock">Productos</h2>
+
+                    <div class="div__tittle-responsive">
+                        <h2>Productos</h2>
+                    </div>
+
+                    <!-- Search and Btn Responsive Design -->
+                    <div class="div__search-responsive">
+                        <button class="add-btn" id="add-btn-responsive">Agregar Producto</button>
+                        <i class='bx bx-grid-alt' id="gridViewResponsive"></i>
+                        <i class='bx bx-list-ul' id="listViewResponsive"></i>
+                    </div>
+
+                    <!-- Search and Btn Design -->
+                    <div class="div__search">
+                        <input type="text" class="search" id="search" placeholder="Buscar...">
+                        <button class="add-btn" id="add-btn">Agregar Producto</button>
+                        <i class='bx bx-grid-alt' id="gridView"></i>
+                        <i class='bx bx-list-ul' id="listView"></i>
+                    </div>
+
+
+
+                    <!-- Modal Design -->
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                          <span class="close-btn">&times;</span>
+                          <h2>Agregar producto</h2>
+                          <form>
+                            <label for="product-name">Nombre:</label>
+                            <input type="text" id="product-name" required>
+                            <label for="product-brand">Marca:</label>
+                            <input type="text" id="product-brand" required>
+                            <label for="product-model">Modelo:</label>
+                            <input type="text" id="product-model" required>
+                            <label for="product-price">Precio:</label>
+                            <input type="number" id="product-price" required>
+                            <label for="product-color">Color:</label>
+                            <input type="text" id="product-color" required>
+                            <label for="product-stock">Stock:</label>
+                            <input type="number" id="product-stock" required>
+                            <label for="product-image">Imagen:</label>
+                            <input type="file" id="product-image" accept="image/*">
+                            <div class="preview-container">
+                              <img id="preview" class="preview" src="#" alt="Imagen del producto">
+                            </div>
+                            <button type="submit">Agregar</button>
+                          </form>
+                        </div>
+                    </div>
+
+                    <!-- Main Stock Design -->
+                    <div class="div__main-stock-info" id="div__main-stock-info">
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                        <div id="div-card" class="div-card">
+
+                            <div class="div-card-image">
+                                <img src="images/shoes-model-1.webp" alt="">
+                            </div>
+
+                            <div class="div-title-product" >
+                                <span id="product-name-title" class="product-name-title">Nike Quest 1</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Marca:</span>
+                                <span id="brand-name">NIKE</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Modelo:</span>
+                                <span>E514257954</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Precio:</span>
+                                <span>$30</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="not-editable">Color: </span>
+                                <span>negro, rojo, azul</span>
+                            </div>
+
+                            <div class="div-info-product">
+                                <span class="span-stock not-editable" id="span-stock">Stock</span>
+                                <input type="text" class="number" id="number" value="12">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+
+                    <!-- Table Stock Normal Design -->
+                    <div class="div__table-stock" id="div__table-stock">
+                        <table class="table-stock" id="table-stock" >
+                            <thead>
+                                <tr>
+                                    <th class="cell-to-modify-1">
+                                        <span>Producto</span>
+                                        <i class='bx bxs-up-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Nombre</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Marca</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Modelo</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Precio</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Color</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Stock</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th class="cell-to-modify-2">
+                                        <span>Acciones</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-1.webp" alt=""></td>
+                                    <td>Nike Quest 1</td>
+                                    <td>NIKE</td>
+                                    <td>E514257954</td>
+                                    <td>$30</td>
+                                    <td>negro, rojo, azul</td>
+                                    <td>12</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-2.webp" alt=""></td>
+                                    <td>Nike Quest 2</td>
+                                    <td>NIKE</td>
+                                    <td>E514257954</td>
+                                    <td>$20</td>
+                                    <td>negro, azul</td>
+                                    <td>1</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-3.webp" alt=""></td>
+                                    <td>Nike Quest 3</td>
+                                    <td>NIKE</td>
+                                    <td>E514257954</td>
+                                    <td>$25</td>
+                                    <td>azul</td>
+                                    <td>10</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-4.webp" alt=""></td>
+                                    <td>Nike Quest 4</td>
+                                    <td>NIKE</td>
+                                    <td>E514257953</td>
+                                    <td>$35</td>
+                                    <td>azul</td>
+                                    <td>20</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-5.webp" alt=""></td>
+                                    <td>Nike Quest 5</td>
+                                    <td>NIKE</td>
+                                    <td>E514257954</td>
+                                    <td>$40</td>
+                                    <td>negro</td>
+                                    <td>10</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-6.webp" alt=""></td>
+                                    <td>Nike Quest 6</td>
+                                    <td>NIKE</td>
+                                    <td>E514257952</td>
+                                    <td>$50</td>
+                                    <td>negro, verde</td>
+                                    <td>15</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-7.jpg" alt=""></td>
+                                    <td>Nike Quest 7</td>
+                                    <td>NIKE</td>
+                                    <td>E514257951</td>
+                                    <td>$60</td>
+                                    <td>negro, rojo</td>
+                                    <td>20</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-8.webp" alt=""></td>
+                                    <td>Nike Quest 8</td>
+                                    <td>NIKE</td>
+                                    <td>E514257954</td>
+                                    <td>$50</td>
+                                    <td>negro, rojo</td>
+                                    <td>5</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-9.webp" alt=""></td>
+                                    <td>Nike Quest 9</td>
+                                    <td>NIKE</td>
+                                    <td>E514257950</td>
+                                    <td>$40</td>
+                                    <td>negro, rojo</td>
+                                    <td>40</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-10.jfif" alt=""></td>
+                                    <td>Nike Quest 10</td>
+                                    <td>NIKE</td>
+                                    <td>E514257958</td>
+                                    <td>$40</td>
+                                    <td>negro</td>
+                                    <td>40</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-11.webp" alt=""></td>
+                                    <td>Nike Quest 11</td>
+                                    <td>NIKE</td>
+                                    <td>E514257957</td>
+                                    <td>$35</td>
+                                    <td>Rojo</td>
+                                    <td>100</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-12.webp" alt=""></td>
+                                    <td>Nike Quest 12</td>
+                                    <td>NIKE</td>
+                                    <td>E514257955</td>
+                                    <td>$20</td>
+                                    <td>negro</td>
+                                    <td>10</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img class="imagen" src="images/shoes-model-13.webp" alt=""></td>
+                                    <td>Nike Quest 13</td>
+                                    <td>NIKE</td>
+                                    <td>E514257952</td>
+                                    <td>$15</td>
+                                    <td>azul</td>
+                                    <td>10</td>
+                                    <td class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Table Stock Responsive Design -->
+                    <div class="div__table-stock-responsive" id="div__table-stock-responsive">
+                        <table class="table-stock-responsive" id="table-stock-responsive">
+                            <thead>
+                                <tr>
+                                    <th class="cell-to-modify-1">
+                                        <span>Producto</span>
+                                        <i class='bx bxs-up-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Nombre</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Marca</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Modelo</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Precio</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Color</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th>
+                                        <span>Stock</span>
+                                        <i class='bx bxs-down-arrow'></i>
+                                    </th>
+                                    <th class="cell-to-modify-2">
+                                        <span>Acciones</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Producto" class="image-td"><a target="_blank" href="images/shoes-model-1.webp">Click</a></td>
+                                    <td data-label="Nombre">Nike Quest 1</td>
+                                    <td data-label="Marca">NIKE</td>
+                                    <td data-label="Modelo">E514257954</td>
+                                    <td data-label="Precio">$30</td>
+                                    <td data-label="Color">negro, rojo, azul</td>
+                                    <td data-label="Stock">12</td>
+                                    <td data-label="Acciones" class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Producto" class="image-td"><a target="_blank" href="images/shoes-model-2.webp">Click</a></td>
+                                    <td data-label="Nombre">Nike Quest 2</td>
+                                    <td data-label="Marca">NIKE</td>
+                                    <td data-label="Modelo">E514257954</td>
+                                    <td data-label="Precio">$35</td>
+                                    <td data-label="Color">negro, rojo</td>
+                                    <td data-label="Stock">10</td>
+                                    <td data-label="Acciones" class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Producto" class="image-td"><a target="_blank" href="images/shoes-model-3.webp">Click</a></td>
+                                    <td data-label="Nombre">Nike Quest 3</td>
+                                    <td data-label="Marca">NIKE</td>
+                                    <td data-label="Modelo">E514257954</td>
+                                    <td data-label="Precio">$40</td>
+                                    <td data-label="Color">rojo</td>
+                                    <td data-label="Stock">50</td>
+                                    <td data-label="Acciones" class="actions"><i class='bx bx-cog'></i><i class='bx bx-map-pin'></i><i class='bx bx-trash'></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>    
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Linked JavaScript -->
+    <script type="text/javascript" src="javascript/javascript.js"></script>
+
+</body>
+</html>
