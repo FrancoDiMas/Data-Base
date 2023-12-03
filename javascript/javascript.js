@@ -190,8 +190,11 @@ form.addEventListener('submit', (event) => {
 
 // Hamburger buttom
 const menuIcon = document.querySelector(".bx-menu");
+const menuX = document.querySelector(".bx-x");
 const menuResponsive = document.querySelector(".menu-responsive");
 
 menuIcon.addEventListener('click',()=>{
-  menuResponsive.classList.toggle('mobile-menu')
+  menuResponsive.classList.toggle('mobile-menu');
+  menuIcon.classList.toggle('bx-menu');
+  menuIcon.classList.toggle('bx-x');
 })

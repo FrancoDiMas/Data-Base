@@ -474,7 +474,7 @@ button[type="submit"]:focus {
     margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
-.header .bx-menu {
+.header .bx-menu, .header .bx-x {
     display: none;
     color: var(--text-w-color);
     font-size: 2.5rem;
@@ -575,7 +575,7 @@ button[type="submit"]:focus {
         display: none;
     }
 
-    .header .bx-menu {
+    .header .bx-menu, .header .bx-x {
         display: block;
     }
 
@@ -641,7 +641,7 @@ button[type="submit"]:focus {
         font-size: 2.5rem;
     }
 
-    .header .bx-menu {
+    .header .bx-menu, .header .bx-x {
         right: 2rem;
     }
 }
